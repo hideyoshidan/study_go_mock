@@ -1,0 +1,10 @@
+with-expecter: true
+packages:
+  mock.com/repository:
+    config:
+      dir: repository/mocks/
+      filename: "mock_{{ .InterfaceName | snakecase }}.go"
+  mock.com/service:
+    config:
+      dir: service/mocks/
+      filename: "mock_{{ .InterfaceName | snakecase }}.go"
